@@ -1,8 +1,28 @@
-@font-face {
-   font-family: MinecraftBold;
-   src: url(../assets/fonts/MinecraftBold.otf);
+body {
+	overflow-x: hidden;
+    background: linear-gradient(-45deg, #1b1b1b, #333333);
+    animation: GRADIENTBG 5s ease infinite;
 }
 
-.minecraftbold {
-  font-family: MinecraftBold;
+@keyframes GRADIENTBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.shine {
+    --start-color: #d628f9;
+    --end-color: #ff0000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(-45deg , #d628f9, #ff0000, var(--start-color), var(--end-color));
+    background-size: 400% 400%;
 }
